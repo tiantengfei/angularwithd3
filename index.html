@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+
+
+    <link href="src/app.css" rel="stylesheet">
+    <link href="src/chart.css" rel="stylesheet">
+    <script type="text/javascript" src="src/chart.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+
+
+</head>
+<body ng-app="chartApp">
+<div ng-controller="mainCtrl as ctrl" >
+
+    <my-scatter-chart class="chart" data="ctrl.logs"></my-scatter-chart>
+    <my-scatter-chart class="chart" data="ctrl.logs"></my-scatter-chart>
+
+</div>
+</body>
+</html>

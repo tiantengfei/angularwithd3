@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var date = new Date('2014-01-01 00:00:00 +0100');
+    var date2 = new Date('2014-08-01 00:00:00 +0100');
+
+
+    var s = {
+        time:date,
+        value:10
+    };
+
+    var s1 = {
+        time:date2,
+        value:20
+    };
+
+    var arr = [s, s1];
+
+    var min = d3.min(arr, function(d){
+
+        return d.time;
+    });
+
+    var max = d3.max(arr, function(d){
+
+        return d.time;
+    });
+    alert(date);
+    var timeScale = d3.time.scale().domain([min,max])
+            .range([0, 100]);
+
+    var date3 = new Date('2014-07-01 00:00:00 +0100');
+
+    console.log(timeScale(date3) + min);
+
+
+</script>
+
+
+</body>
+</html>
